@@ -1,0 +1,17 @@
+Which type of method on a SparkRDD executes code to retrieve data?
+* actions
+
+What is the main difference between a method name sortBy vs sortByKey or reduce vs reduceByKey?
+* ByKey means the data needs to be shaped as a tuple with a key & value. Without the ByKey you need to specify how it does the key grouping.
+
+When doing multiple transformations, it is better to chain them in one big statement vs staging them to individual RDD variables.
+* False
+
+If you need a function that is more than one line long, you cannot pass it into a function because lambdas can only be one line.
+* False, you can always write a function and pass the function name. Lambdas are just a convenience if they work for your situation.
+
+Which module allows python to connect to spark?
+* pyspark
+
+To store really large files, they should be placed where?
+* HDFS
