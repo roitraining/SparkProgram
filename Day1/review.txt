@@ -1,7 +1,7 @@
 Which type of method on a SparkRDD executes code to retrieve data?
 * actions
 
-What is the main difference between a method name sortBy vs sortByKey or reduce vs reduceByKey?
+What is the main difference between a method name sortBy vs. sortByKey or reduce vs reduceByKey?
 * ByKey means the data needs to be shaped as a tuple with a key & value. Without the ByKey you need to specify how it does the key grouping.
 
 When doing multiple transformations, it is better to chain them in one big statement vs staging them to individual RDD variables.
