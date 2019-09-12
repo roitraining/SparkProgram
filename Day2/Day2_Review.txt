@@ -1,16 +1,16 @@
-The easiest way to examine the contents of a DataFrame during development is
+The easiest way to examine the contents of a DataFrame during development is:
 .collect()
 * .show()
 .inspect()
 .take()
 
-Which method of a DataFrame is used to create a calculated column
+Which method of a DataFrame is used to create a calculated column?
 .select()
 .alias()
 .expr()
 * .withColumn()
 
-Given the following data, which of the following would not return the total quantity by category
+Given the following data, which of the following would not return the total quantity by category?
 +---------+--------------------+------------+
 |productid|         productname|unitsinstock|
 +---------+--------------------+------------+
@@ -25,16 +25,16 @@ products.agg({'unitsinstock':'sum'}).show()
 products.agg(F.sum('unitsinstock')).show()
 products.agg(expr('sum(unitsinstock) as Total')).show()
 
-Which of the following file formats requires an external library
+Which of the following file formats requires an external library?
 JSON
 CSV
 * AVRO
 ORC
 
-True or false: The values for a column in a DataFrame can be updated using the map() method
+The values for a column in a DataFrame can be updated using the map() method.
 False
 
-True of false: Only inner joins are support by Spark DataFrames
+Only inner joins are supported by Spark DataFrames.
 False
 
 
