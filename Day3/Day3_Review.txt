@@ -1,0 +1,27 @@
+1 Which of the following would create a View in Spark:
+
+df.createView('ViewName)
+*  df.createOrReplaceTempView('ViewName')
+spark.createOrReplaceTempView('SELECT * FROM df')
+spark.sql('CREATE VIEW myview as SELECT * FROM df')
+
+
+2 When doing complex operations in Spark it is better to use method calls instead of SparkSQL due to higher performance.
+False there is no performance difference, they both use the exact same query plans
+
+3 Spark can only call Python functions when using the method syntax since there is no support for this feature in SparkSQL
+False spark.udf.register can be used to make any Python function callable in SparkSQL
+
+4 Which function in SparkSQL can be used to accumulate multiple records into a list
+* collect_list
+collect
+array
+struct_type
+
+5 Which spark function can be used to flatten an array field into multiple rows
+flatten
+flatMap
+* explode
+stack
+
+
