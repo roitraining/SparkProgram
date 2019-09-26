@@ -1,0 +1,4 @@
+{"OrderID":10585,"CustomerID":"WELLI","OrderDate":"1997-07-01T00:00:00.000Z","LineItems":[{"ProductID":47,"UnitPrice":9.5,"Quantity":15,"Discount":0.0}]}
+{"OrderID":10586,"CustomerID":"REGGC","OrderDate":"1997-07-02T00:00:00.000Z","LineItems":[{"ProductID":52,"UnitPrice":7.0,"Quantity":4,"Discount":0.15}]}
+{"OrderID":10587,"CustomerID":"QUEDE","OrderDate":"1997-07-02T00:00:00.000Z","LineItems":[{"ProductID":77,"UnitPrice":13.0,"Quantity":20,"Discount":0.0},{"ProductID":26,"UnitPrice":31.23,"Quantity":6,"Discount":0.0},{"ProductID":35,"UnitPrice":18.0,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10588,"CustomerID":"QUICK","OrderDate":"1997-07-03T00:00:00.000Z","LineItems":[{"ProductID":18,"UnitPrice":62.5,"Quantity":40,"Discount":0.2},{"ProductID":42,"UnitPrice":14.0,"Quantity":100,"Discount":0.2}]}

@@ -1,0 +1,4 @@
+{"OrderID":10315,"CustomerID":"ISLAT","OrderDate":"1996-09-26T00:00:00.000Z","LineItems":[{"ProductID":70,"UnitPrice":12.0,"Quantity":30,"Discount":0.0},{"ProductID":34,"UnitPrice":11.2,"Quantity":14,"Discount":0.0}]}
+{"OrderID":10316,"CustomerID":"RATTC","OrderDate":"1996-09-27T00:00:00.000Z","LineItems":[{"ProductID":62,"UnitPrice":39.4,"Quantity":70,"Discount":0.0},{"ProductID":41,"UnitPrice":7.7,"Quantity":10,"Discount":0.0}]}
+{"OrderID":10317,"CustomerID":"LONEP","OrderDate":"1996-09-30T00:00:00.000Z","LineItems":[{"ProductID":1,"UnitPrice":14.4,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10318,"CustomerID":"ISLAT","OrderDate":"1996-10-01T00:00:00.000Z","LineItems":[{"ProductID":41,"UnitPrice":7.7,"Quantity":20,"Discount":0.0},{"ProductID":76,"UnitPrice":14.4,"Quantity":6,"Discount":0.0}]}

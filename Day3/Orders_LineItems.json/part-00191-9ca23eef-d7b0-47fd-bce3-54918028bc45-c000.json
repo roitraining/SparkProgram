@@ -1,0 +1,4 @@
+{"OrderID":11041,"CustomerID":"CHOPS","OrderDate":"1998-04-22T00:00:00.000Z","LineItems":[{"ProductID":2,"UnitPrice":19.0,"Quantity":30,"Discount":0.2},{"ProductID":63,"UnitPrice":43.9,"Quantity":30,"Discount":0.0}]}
+{"OrderID":11042,"CustomerID":"COMMI","OrderDate":"1998-04-22T00:00:00.000Z","LineItems":[{"ProductID":44,"UnitPrice":19.45,"Quantity":15,"Discount":0.0},{"ProductID":61,"UnitPrice":28.5,"Quantity":4,"Discount":0.0}]}
+{"OrderID":11043,"CustomerID":"SPECD","OrderDate":"1998-04-22T00:00:00.000Z","LineItems":[{"ProductID":11,"UnitPrice":21.0,"Quantity":10,"Discount":0.0}]}
+{"OrderID":11044,"CustomerID":"WOLZA","OrderDate":"1998-04-23T00:00:00.000Z","LineItems":[{"ProductID":62,"UnitPrice":49.3,"Quantity":12,"Discount":0.0}]}
