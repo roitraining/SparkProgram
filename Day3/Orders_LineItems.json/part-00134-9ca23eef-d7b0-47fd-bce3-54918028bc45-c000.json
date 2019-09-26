@@ -1,0 +1,4 @@
+{"OrderID":10805,"CustomerID":"THEBI","OrderDate":"1997-12-30T00:00:00.000Z","LineItems":[{"ProductID":34,"UnitPrice":14.0,"Quantity":10,"Discount":0.0},{"ProductID":38,"UnitPrice":263.5,"Quantity":10,"Discount":0.0}]}
+{"OrderID":10806,"CustomerID":"VICTE","OrderDate":"1997-12-31T00:00:00.000Z","LineItems":[{"ProductID":74,"UnitPrice":10.0,"Quantity":15,"Discount":0.25},{"ProductID":65,"UnitPrice":21.05,"Quantity":2,"Discount":0.0},{"ProductID":2,"UnitPrice":19.0,"Quantity":20,"Discount":0.25}]}
+{"OrderID":10807,"CustomerID":"FRANS","OrderDate":"1997-12-31T00:00:00.000Z","LineItems":[{"ProductID":40,"UnitPrice":18.4,"Quantity":1,"Discount":0.0}]}
+{"OrderID":10808,"CustomerID":"OLDWO","OrderDate":"1998-01-01T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":50,"Discount":0.15},{"ProductID":56,"UnitPrice":38.0,"Quantity":20,"Discount":0.15}]}

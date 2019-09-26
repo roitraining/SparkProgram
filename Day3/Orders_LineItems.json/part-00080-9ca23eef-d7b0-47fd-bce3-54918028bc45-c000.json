@@ -1,0 +1,5 @@
+{"OrderID":10580,"CustomerID":"OTTIK","OrderDate":"1997-06-26T00:00:00.000Z","LineItems":[{"ProductID":65,"UnitPrice":21.05,"Quantity":30,"Discount":0.05},{"ProductID":41,"UnitPrice":9.65,"Quantity":9,"Discount":0.05},{"ProductID":14,"UnitPrice":23.25,"Quantity":15,"Discount":0.05}]}
+{"OrderID":10581,"CustomerID":"FAMIA","OrderDate":"1997-06-26T00:00:00.000Z","LineItems":[{"ProductID":75,"UnitPrice":7.75,"Quantity":50,"Discount":0.2}]}
+{"OrderID":10582,"CustomerID":"BLAUS","OrderDate":"1997-06-27T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":14,"Discount":0.0},{"ProductID":57,"UnitPrice":19.5,"Quantity":4,"Discount":0.0}]}
+{"OrderID":10583,"CustomerID":"WARTH","OrderDate":"1997-06-30T00:00:00.000Z","LineItems":[{"ProductID":29,"UnitPrice":123.79,"Quantity":10,"Discount":0.0},{"ProductID":60,"UnitPrice":34.0,"Quantity":24,"Discount":0.15},{"ProductID":69,"UnitPrice":36.0,"Quantity":10,"Discount":0.15}]}
+{"OrderID":10584,"CustomerID":"BLONP","OrderDate":"1997-06-30T00:00:00.000Z","LineItems":[{"ProductID":31,"UnitPrice":12.5,"Quantity":50,"Discount":0.05}]}

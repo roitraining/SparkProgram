@@ -1,0 +1,4 @@
+{"OrderID":10763,"CustomerID":"FOLIG","OrderDate":"1997-12-03T00:00:00.000Z","LineItems":[{"ProductID":22,"UnitPrice":21.0,"Quantity":6,"Discount":0.0},{"ProductID":24,"UnitPrice":4.5,"Quantity":20,"Discount":0.0},{"ProductID":21,"UnitPrice":10.0,"Quantity":40,"Discount":0.0}]}
+{"OrderID":10764,"CustomerID":"ERNSH","OrderDate":"1997-12-03T00:00:00.000Z","LineItems":[{"ProductID":3,"UnitPrice":10.0,"Quantity":20,"Discount":0.1},{"ProductID":39,"UnitPrice":18.0,"Quantity":130,"Discount":0.1}]}
+{"OrderID":10765,"CustomerID":"QUICK","OrderDate":"1997-12-04T00:00:00.000Z","LineItems":[{"ProductID":65,"UnitPrice":21.05,"Quantity":80,"Discount":0.1}]}
+{"OrderID":10766,"CustomerID":"OTTIK","OrderDate":"1997-12-05T00:00:00.000Z","LineItems":[{"ProductID":2,"UnitPrice":19.0,"Quantity":40,"Discount":0.0},{"ProductID":68,"UnitPrice":12.5,"Quantity":40,"Discount":0.0},{"ProductID":7,"UnitPrice":30.0,"Quantity":35,"Discount":0.0}]}

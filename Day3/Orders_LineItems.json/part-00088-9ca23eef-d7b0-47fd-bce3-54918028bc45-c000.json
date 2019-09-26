@@ -1,0 +1,4 @@
+{"OrderID":10614,"CustomerID":"BLAUS","OrderDate":"1997-07-29T00:00:00.000Z","LineItems":[{"ProductID":11,"UnitPrice":21.0,"Quantity":14,"Discount":0.0},{"ProductID":39,"UnitPrice":18.0,"Quantity":5,"Discount":0.0},{"ProductID":21,"UnitPrice":10.0,"Quantity":8,"Discount":0.0}]}
+{"OrderID":10615,"CustomerID":"WILMK","OrderDate":"1997-07-30T00:00:00.000Z","LineItems":[{"ProductID":55,"UnitPrice":24.0,"Quantity":5,"Discount":0.0}]}
+{"OrderID":10616,"CustomerID":"GREAL","OrderDate":"1997-07-31T00:00:00.000Z","LineItems":[{"ProductID":71,"UnitPrice":21.5,"Quantity":15,"Discount":0.05},{"ProductID":70,"UnitPrice":15.0,"Quantity":15,"Discount":0.05},{"ProductID":38,"UnitPrice":263.5,"Quantity":15,"Discount":0.05},{"ProductID":56,"UnitPrice":38.0,"Quantity":14,"Discount":0.0}]}
+{"OrderID":10617,"CustomerID":"GREAL","OrderDate":"1997-07-31T00:00:00.000Z","LineItems":[{"ProductID":59,"UnitPrice":55.0,"Quantity":30,"Discount":0.15}]}

@@ -1,0 +1,4 @@
+{"OrderID":10817,"CustomerID":"KOENE","OrderDate":"1998-01-06T00:00:00.000Z","LineItems":[{"ProductID":62,"UnitPrice":49.3,"Quantity":25,"Discount":0.15},{"ProductID":38,"UnitPrice":263.5,"Quantity":30,"Discount":0.0},{"ProductID":40,"UnitPrice":18.4,"Quantity":60,"Discount":0.15},{"ProductID":26,"UnitPrice":31.23,"Quantity":40,"Discount":0.15}]}
+{"OrderID":10818,"CustomerID":"MAGAA","OrderDate":"1998-01-07T00:00:00.000Z","LineItems":[{"ProductID":32,"UnitPrice":32.0,"Quantity":20,"Discount":0.0},{"ProductID":41,"UnitPrice":9.65,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10819,"CustomerID":"CACTU","OrderDate":"1998-01-07T00:00:00.000Z","LineItems":[{"ProductID":43,"UnitPrice":46.0,"Quantity":7,"Discount":0.0},{"ProductID":75,"UnitPrice":7.75,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10820,"CustomerID":"RATTC","OrderDate":"1998-01-07T00:00:00.000Z","LineItems":[{"ProductID":56,"UnitPrice":38.0,"Quantity":30,"Discount":0.0}]}
