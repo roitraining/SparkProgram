@@ -1,3 +1,6 @@
+# pip install pymongo
+# pyspark --packages org.mongodb.spark:mongo-spark-connector_2.11:2.4.1
+
 import pymongo
 client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
 classroom = client["classroom"]
