@@ -1,14 +1,14 @@
 NoSQL clusters are used to:
-  1. write queries without the need for NoSQL
-* 2. scale transaction performance and volume
-  3. perform rapid data warehousing queries
-  4. guarantee ACID properties
+  1. Write queries without the need for NoSQL
+* 2. Scale transaction performance and volume
+  3. Perform rapid data warehousing queries
+  4. Guarantee ACID properties
 
-MongoDB is a NoSQL database that saves data as
-  1. records
-  2. key/value pairs
-* 3. documents 
-  4. graph
+MongoDB is a NoSQL database that saves data as:
+  1. Records
+  2. Key/value pairs
+* 3. Documents 
+  4. Graph
 
 Cassandra supports all of the following SQL queries except:
   1. INSERT
@@ -16,25 +16,25 @@ Cassandra supports all of the following SQL queries except:
  *3. JOIN
   4. DELETE
 
-The main trade-off in choosing NoSQL vs SQL is:
-  1. speed vs reliability
-  2. cost vs accuracy
-  3. indexes vs normalization
-* 4. consistency vs availability
+The main trade-off in choosing NoSQL vs. SQL is:
+  1. Speed vs. reliability
+  2. Cost vs. accuracy
+  3. Indexes vs. normalization
+* 4. Consistency vs. availability
 
 The Cassandra equivalent to a database is called:
-* 1. keyspace
-  2. namespace
-  3. document
-  4. there is no equivalent
+* 1. Keyspace
+  2. Namespace
+  3. Document
+  4. There is no equivalent
 
 The MongoDB equivalent to a table is called:
-  1. document
-* 2. collection
-  3. namespace
-  4. cursor
+  1. Document
+* 2. Collection
+  3. Namespace
+  4. Cursor
 
-Spark can read MongoDB data using which method of the following type of statements:
+Spark can read MongoDB data using which method of the following type of statements?
   1. df = spark.read.nosql(***).load()
   2. df = spark.read.mongo(***).load()
 * 3. df = spark.read.format(***).load()
