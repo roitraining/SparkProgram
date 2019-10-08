@@ -10,3 +10,15 @@ DStreams can be retrieved from the:
   3 SparkSession
   4 SocketStream
 
+Windowing operations allow you to:
+  1 calculate ranks
+  2 run spark on Windows clients
+* 3 create a sliding aggregate
+  4 retire old items in the queue
+
+To allow old items in the queue to expire use:
+* 1 watermarking
+  2 checkpointing
+  3 Windowing
+  4 DStreams
+  
