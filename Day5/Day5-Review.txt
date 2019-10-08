@@ -1,0 +1,12 @@
+What does DStream mean
+  1 Down Stream
+  2 Dataframe Streams
+* 3 Discretized Stream
+  4 Defined Stream
+
+DStreams can be retrieved from the:
+  1 SparkContext
+* 2 StreamingContext
+  3 SparkSession
+  4 SocketStream
+
