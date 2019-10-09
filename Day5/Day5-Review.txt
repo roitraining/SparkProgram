@@ -1,4 +1,4 @@
-What does DStream mean
+What does DStream mean?
   1 Down Stream
   2 Dataframe Streams
 * 3 Discretized Stream
@@ -11,14 +11,14 @@ DStreams can be retrieved from the:
   4 SocketStream
 
 Windowing operations allow you to:
-  1 calculate ranks
-  2 run spark on Windows clients
-* 3 create a sliding aggregate
-  4 retire old items in the queue
+  1 Calculate ranks
+  2 Run spark on Windows clients
+* 3 Create a sliding aggregate
+  4 Retire old items in the queue
 
-To allow old items in the queue to expire use:
-* 1 watermarking
-  2 checkpointing
+To allow old items in the queue to expire, use:
+* 1 Watermarking
+  2 Checkpointing
   3 Windowing
   4 DStreams
   
