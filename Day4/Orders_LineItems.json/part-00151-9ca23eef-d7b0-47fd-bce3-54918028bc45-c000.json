@@ -1,0 +1,4 @@
+{"OrderID":10875,"CustomerID":"BERGS","OrderDate":"1998-02-06T00:00:00.000Z","LineItems":[{"ProductID":49,"UnitPrice":20.0,"Quantity":15,"Discount":0.0},{"ProductID":19,"UnitPrice":9.2,"Quantity":25,"Discount":0.0},{"ProductID":47,"UnitPrice":9.5,"Quantity":21,"Discount":0.1}]}
+{"OrderID":10876,"CustomerID":"BONAP","OrderDate":"1998-02-09T00:00:00.000Z","LineItems":[{"ProductID":46,"UnitPrice":12.0,"Quantity":21,"Discount":0.0},{"ProductID":64,"UnitPrice":33.25,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10877,"CustomerID":"RICAR","OrderDate":"1998-02-09T00:00:00.000Z","LineItems":[{"ProductID":16,"UnitPrice":17.45,"Quantity":30,"Discount":0.25},{"ProductID":18,"UnitPrice":62.5,"Quantity":25,"Discount":0.0}]}
+{"OrderID":10878,"CustomerID":"QUICK","OrderDate":"1998-02-10T00:00:00.000Z","LineItems":[{"ProductID":20,"UnitPrice":81.0,"Quantity":20,"Discount":0.05}]}

@@ -1,0 +1,4 @@
+{"OrderID":10900,"CustomerID":"WELLI","OrderDate":"1998-02-20T00:00:00.000Z","LineItems":[{"ProductID":70,"UnitPrice":15.0,"Quantity":3,"Discount":0.25}]}
+{"OrderID":10901,"CustomerID":"HILAA","OrderDate":"1998-02-23T00:00:00.000Z","LineItems":[{"ProductID":41,"UnitPrice":9.65,"Quantity":30,"Discount":0.0},{"ProductID":71,"UnitPrice":21.5,"Quantity":30,"Discount":0.0}]}
+{"OrderID":10902,"CustomerID":"FOLKO","OrderDate":"1998-02-23T00:00:00.000Z","LineItems":[{"ProductID":62,"UnitPrice":49.3,"Quantity":6,"Discount":0.15},{"ProductID":55,"UnitPrice":24.0,"Quantity":30,"Discount":0.15}]}
+{"OrderID":10903,"CustomerID":"HANAR","OrderDate":"1998-02-24T00:00:00.000Z","LineItems":[{"ProductID":65,"UnitPrice":21.05,"Quantity":21,"Discount":0.0},{"ProductID":68,"UnitPrice":12.5,"Quantity":20,"Discount":0.0},{"ProductID":13,"UnitPrice":6.0,"Quantity":40,"Discount":0.0}]}

@@ -1,0 +1,4 @@
+{"OrderID":10813,"CustomerID":"RICAR","OrderDate":"1998-01-05T00:00:00.000Z","LineItems":[{"ProductID":2,"UnitPrice":19.0,"Quantity":12,"Discount":0.2},{"ProductID":46,"UnitPrice":12.0,"Quantity":35,"Discount":0.0}]}
+{"OrderID":10814,"CustomerID":"VICTE","OrderDate":"1998-01-05T00:00:00.000Z","LineItems":[{"ProductID":61,"UnitPrice":28.5,"Quantity":30,"Discount":0.15},{"ProductID":48,"UnitPrice":12.75,"Quantity":8,"Discount":0.15},{"ProductID":43,"UnitPrice":46.0,"Quantity":20,"Discount":0.15},{"ProductID":41,"UnitPrice":9.65,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10815,"CustomerID":"SAVEA","OrderDate":"1998-01-05T00:00:00.000Z","LineItems":[{"ProductID":33,"UnitPrice":2.5,"Quantity":16,"Discount":0.0}]}
+{"OrderID":10816,"CustomerID":"GREAL","OrderDate":"1998-01-06T00:00:00.000Z","LineItems":[{"ProductID":38,"UnitPrice":263.5,"Quantity":30,"Discount":0.05},{"ProductID":62,"UnitPrice":49.3,"Quantity":20,"Discount":0.05}]}

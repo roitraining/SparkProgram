@@ -1,0 +1,4 @@
+{"OrderID":10589,"CustomerID":"GREAL","OrderDate":"1997-07-04T00:00:00.000Z","LineItems":[{"ProductID":35,"UnitPrice":18.0,"Quantity":4,"Discount":0.0}]}
+{"OrderID":10590,"CustomerID":"MEREP","OrderDate":"1997-07-07T00:00:00.000Z","LineItems":[{"ProductID":77,"UnitPrice":13.0,"Quantity":60,"Discount":0.05},{"ProductID":1,"UnitPrice":18.0,"Quantity":20,"Discount":0.0}]}
+{"OrderID":10591,"CustomerID":"VAFFE","OrderDate":"1997-07-07T00:00:00.000Z","LineItems":[{"ProductID":3,"UnitPrice":10.0,"Quantity":14,"Discount":0.0},{"ProductID":7,"UnitPrice":30.0,"Quantity":10,"Discount":0.0},{"ProductID":54,"UnitPrice":7.45,"Quantity":50,"Discount":0.0}]}
+{"OrderID":10592,"CustomerID":"LEHMS","OrderDate":"1997-07-08T00:00:00.000Z","LineItems":[{"ProductID":26,"UnitPrice":31.23,"Quantity":5,"Discount":0.05},{"ProductID":15,"UnitPrice":15.5,"Quantity":25,"Discount":0.05}]}

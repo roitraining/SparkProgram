@@ -1,0 +1,4 @@
+{"OrderID":10991,"CustomerID":"QUICK","OrderDate":"1998-04-01T00:00:00.000Z","LineItems":[{"ProductID":70,"UnitPrice":15.0,"Quantity":20,"Discount":0.2},{"ProductID":76,"UnitPrice":18.0,"Quantity":90,"Discount":0.2},{"ProductID":2,"UnitPrice":19.0,"Quantity":50,"Discount":0.2}]}
+{"OrderID":10992,"CustomerID":"THEBI","OrderDate":"1998-04-01T00:00:00.000Z","LineItems":[{"ProductID":72,"UnitPrice":34.8,"Quantity":2,"Discount":0.0}]}
+{"OrderID":10993,"CustomerID":"FOLKO","OrderDate":"1998-04-01T00:00:00.000Z","LineItems":[{"ProductID":29,"UnitPrice":123.79,"Quantity":50,"Discount":0.25},{"ProductID":41,"UnitPrice":9.65,"Quantity":35,"Discount":0.25}]}
+{"OrderID":10994,"CustomerID":"VAFFE","OrderDate":"1998-04-02T00:00:00.000Z","LineItems":[{"ProductID":59,"UnitPrice":55.0,"Quantity":18,"Discount":0.05}]}

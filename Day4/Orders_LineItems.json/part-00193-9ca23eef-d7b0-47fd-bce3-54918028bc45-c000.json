@@ -1,0 +1,5 @@
+{"OrderID":11049,"CustomerID":"GOURL","OrderDate":"1998-04-24T00:00:00.000Z","LineItems":[{"ProductID":12,"UnitPrice":38.0,"Quantity":4,"Discount":0.2},{"ProductID":2,"UnitPrice":19.0,"Quantity":10,"Discount":0.2}]}
+{"OrderID":11050,"CustomerID":"FOLKO","OrderDate":"1998-04-27T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":50,"Discount":0.1}]}
+{"OrderID":11051,"CustomerID":"LAMAI","OrderDate":"1998-04-27T00:00:00.000Z","LineItems":[{"ProductID":24,"UnitPrice":4.5,"Quantity":10,"Discount":0.2}]}
+{"OrderID":11052,"CustomerID":"HANAR","OrderDate":"1998-04-27T00:00:00.000Z","LineItems":[{"ProductID":43,"UnitPrice":46.0,"Quantity":30,"Discount":0.2},{"ProductID":61,"UnitPrice":28.5,"Quantity":10,"Discount":0.2}]}
+{"OrderID":11053,"CustomerID":"PICCO","OrderDate":"1998-04-27T00:00:00.000Z","LineItems":[{"ProductID":32,"UnitPrice":32.0,"Quantity":20,"Discount":0.0},{"ProductID":18,"UnitPrice":62.5,"Quantity":35,"Discount":0.2},{"ProductID":64,"UnitPrice":33.25,"Quantity":25,"Discount":0.2}]}
