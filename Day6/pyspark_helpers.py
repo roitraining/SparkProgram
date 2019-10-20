@@ -211,16 +211,19 @@ def AssembleFeatures(df, categorical_features, numeric_features, target_label = 
     return assembler.transform(df).drop(*(numeric_features + [c + '_Vector' for c in categorical_features]))
     
 def MakeMLDataFrame(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
-    if target_is_categorical:
-       df1 = StringIndexEncode(df, categorical_features + [target_label])
-       df2 = OneHotEncode(df1, categorical_features)
-       df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label + '_Index')
-    elif target_label:
-       df1 = StringIndexEncode(df, categorical_features)
-       df2 = OneHotEncode(df1, categorical_features)
-       df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label, False)
+    if target_label:
+       df0 = df.select(categorical_features + numeric_features + [target_label])
+       if target_is_categorical: 
+           df1 = StringIndexEncode(df0, categorical_features + [target_label])
+           df2 = OneHotEncode(df1, categorical_features)
+           df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label + '_Index').select('features', 'label')
+       else:
+           df1 = StringIndexEncode(df0, categorical_features)
+           df2 = OneHotEncode(df1, categorical_features)
+           df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label, False).select('features', 'target')
     else:
-       df1 = StringIndexEncode(df, categorical_features)
+       df0 = df.select(categorical_features + numeric_features)
+       df1 = StringIndexEncode(df0, categorical_features)
        df2 = OneHotEncode(df1, categorical_features)
        df3 =  AssembleFeatures(df2, categorical_features, numeric_features)
     return df3
@@ -252,6 +255,40 @@ def MakeMLDataFramePipeline(df, categorical_features, numeric_features, target_l
     #dfx = dfx.select(['label', 'features'] + cols)
     #catindexes = {x.getOutputCol() : x.labels for x in dfML.stages if isinstance(x, StringIndexerModel)}
     return dfML 
+
+def evaluateCluster(model, df):
+    from pyspark.ml.clustering import KMeans
+    from pyspark.ml.evaluation import ClusteringEvaluator
+    wssse = model.computeCost(dfML.select('features'))
+    print("Within Set Sum of Squared Errors = " + str(wssse))
+
+    evaluator = ClusteringEvaluator()
+
+    predictions = model.transform(df)
+    silhouette = evaluator.evaluate(predictions)
+    print("Silhouette with squared euclidean distance = " + str(silhouette))
+
+    # Shows the result.
+    centers = model.clusterCenters()
+    print("Cluster Centers: ")
+    for center in centers:
+        print(center)
+
+def plot_elbow(df, cluster_cnt = 10):
+    import matplotlib as mp
+    from matplotlib import pyplot as plt
+    from pyspark.ml.clustering import KMeans
+    from pyspark.ml.evaluation import ClusteringEvaluator
+    import numpy as np
+    CLUSTERS = range(2, cluster_cnt)
+    scores = [KMeans().setK(c).setSeed(1).fit(df).computeCost(df)
+              for c in CLUSTERS]
+    print(scores)
+    plt.plot(CLUSTERS, scores)
+    plt.xlabel('Number of Clusters')
+    plt.ylabel('Score')
+    plt.title('Elbow Curve')
+    plt.xticks(np.arange(2, cluster_cnt))
 
 if __name__ == '__main__':
     sc, spark, conf = initspark()
