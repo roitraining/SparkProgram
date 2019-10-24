@@ -24,4 +24,5 @@ In order to get the predicted value from a trained model, you would call:
    1 fit
    2 predicted
  * 3 transform
-   4 estimapre
+   4 estimator
+
