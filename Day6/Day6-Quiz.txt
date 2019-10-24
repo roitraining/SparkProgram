@@ -1,27 +1,27 @@
-Which of the following models can be used for cluster analysis
+Which of the following models can be used for cluster analysis?
   1 Decision Tree
 * 2 K-Means
   3 Logistic Regression
   4 Neural Network
 
-Regression Analysis requires all the features to be numerical
+Regression Analysis requires all the features to be numerical.
 * True
   False
 
-To convert categorical features you should use
+To convert categorical features, you should use:
   1 Dummy Coding
   2 Scaling
 * 3 StringIndexer  and OneHotEncoderEstimator
   4 Naive Bayes
 
-To train a model you would call which method on it
+To train a model, you would call which method on it?
 * 1 fit
   2 train
   3 evaluate
   4 estimate
 
-In order to get the predicted value from a trained model, you would call
+In order to get the predicted value from a trained model, you would call:
    1 fit
    2 predicted
  * 3 transform
-   4 estimate
+   4 estimapre
