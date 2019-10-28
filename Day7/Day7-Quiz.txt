@@ -1,0 +1,24 @@
+Which of the following is an ensemble learning teachniqe:
+  1. Neural Network
+  2. Decision Tree
+* 3. Random Forest
+  4. Logistic Regression
+
+Which of the following techniques offers the least transparency:
+  1. Decision Tree
+* 2. Neural Networks
+  3. Random Forest
+  4. Logistic Regression
+
+In order to train a model you would call which method:
+  1. train()
+* 2. fit()
+  3. evaluate()
+  4. transform()
+
+  Which package contains functions to rescale data in different ways:
+  * 1. pyspark.ml.feature
+    2. pyspark.mllib.features
+    3. pyspark.ml.scalers
+    4. pyspark.mllib.linalg
+
