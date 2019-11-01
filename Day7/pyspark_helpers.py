@@ -37,8 +37,12 @@ def auto_numeric_features(df, exceptlist = ()):
     numeric_features = [t[0] for t in df.dtypes if t[0] not in exceptlist and t[1] in ['int', 'double']]
     return numeric_features
 
-def auto_categorical_features(df):
-    categorical_features = [c for c in df.columns if c.endswith('_ID') or c.endswith('_FLAG')]
+def auto_categorical_features(df, suffix = ('ID', 'CODE', 'FLAG'), exceptlist = ()):
+    if suffix:
+        categorical_features = [c for c in df.columns if c not in exceptlist and c.upper().endswith(tuple(map(str.upper, suffix)))]
+    else:
+        categorical_features = [t[0] for t in df.dtypes if t[0] not in exceptlist and t[1] not in ['int', 'double']]
+
     return categorical_features
 
 def describe_numeric_features(df, numeric_features):
@@ -137,7 +141,7 @@ def evaluate_predictions(predictions, show = True):
     log['aupr'] = evaluator.evaluate(predictions)
 
     # Metrics
-    predictionRDD = predictions.select(['label', 'prediction'])                    .rdd.map(lambda line: (line[1], line[0]))
+    predictionRDD = predictions.select(['label', 'prediction']).rdd.map(lambda line: (line[1], line[0]))
     metrics = MulticlassMetrics(predictionRDD)
     
 
@@ -185,12 +189,19 @@ def predict_and_evaluate(model, test, show = True, showModel = True):
     log = evaluate_predictions(predictions, show)
     return (predictions, log)
 
-def StringIndexEncode(df, columns):
+def StringIndexEncode(df, columns, return_key_dict = False):
     from pyspark.ml.feature import StringIndexer
     df1 = df
+    keydict = {}
     for col in columns:
         indexer = StringIndexer(inputCol = col, outputCol = col+'_Index')
-        df1 = indexer.fit(df1).transform(df1).drop(col) 
+        df1 = indexer.fit(df1).transform(df1)
+        if return_key_dict:
+           keydict[col] = dict(list(map(tuple, df1.select(col, col + '_Index').distinct().collect())))
+        df1 = df1.drop(col) 
+
+    if return_key_dict and len(keydict) > 0:
+       return df1, keydict
     return df1
 
 def OneHotEncode(df, columns):
@@ -199,6 +210,7 @@ def OneHotEncode(df, columns):
     for col in columns:
         encoder = OneHotEncoderEstimator(inputCols=[col + '_Index'], outputCols=[col+'_Vector'])
         df1 = encoder.fit(df1).transform(df1).drop(col + '_Index')
+    print('---> ', type(df1[col+'_Vector']), df1.columns, df1.take(1))
     return df1
 
 def AssembleFeatures(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
@@ -210,25 +222,40 @@ def AssembleFeatures(df, categorical_features, numeric_features, target_label = 
         return assembler.transform(df).withColumnRenamed(target_label, 'label' if target_is_categorical else 'target').drop(*(numeric_features + [c + '_Vector' for c in categorical_features]))
     return assembler.transform(df).drop(*(numeric_features + [c + '_Vector' for c in categorical_features]))
     
-def MakeMLDataFrame(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
+def MakeMLDataFrame(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True, return_key_dict = False):
     if target_label:
        df0 = df.select(categorical_features + numeric_features + [target_label])
        if target_is_categorical: 
-           df1 = StringIndexEncode(df0, categorical_features + [target_label])
+           df1 = StringIndexEncode(df0, categorical_features + [target_label], return_key_dict = return_key_dict)
+           if type(df1) is tuple:
+               keydict = df1[1]
+               df1 = df1[0]
            df2 = OneHotEncode(df1, categorical_features)
-           df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label + '_Index').select('features', 'label')
+           df3 = AssembleFeatures(df2, categorical_features, numeric_features, target_label + '_Index', target_is_categorical = True) #.select('features', 'label')
        else:
-           df1 = StringIndexEncode(df0, categorical_features)
+           df1 = StringIndexEncode(df0, categorical_features, return_key_dict = return_key_dict)
+           if type(df1) is tuple:
+               keydict = df1[1]
+               df1 = df1[0]
            df2 = OneHotEncode(df1, categorical_features)
-           df3 =  AssembleFeatures(df2, categorical_features, numeric_features, target_label, False).select('features', 'target')
+           df3 = AssembleFeatures(df2, categorical_features, numeric_features, target_label, target_is_categorical = False).select('features', 'target')
     else:
        df0 = df.select(categorical_features + numeric_features)
-       df1 = StringIndexEncode(df0, categorical_features)
+       df1 = StringIndexEncode(df0, categorical_features, return_key_dict = return_key_dict)
+#       if skip_string_indexer:
+#           df1 = df0
+#           for col in categorical_features:
+#               df1 = df1.withColumnRenamed(col, col + '_Index')
+#           print('** df1 columns', df1.columns)
+#       else:
+       if type(df1) is tuple:
+           keydict = df1[1]
+           df1 = df1[0]
        df2 = OneHotEncode(df1, categorical_features)
-       df3 =  AssembleFeatures(df2, categorical_features, numeric_features)
+       df3 = AssembleFeatures(df2, categorical_features, numeric_features).select('features')
+    if return_key_dict and len(keydict) > 0:
+        return (df3, keydict)
     return df3
-
-#def fix_categorical_data(df, categorical_features, target_col, numeric_features = []):
 
 def MakeMLDataFramePipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
     from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer, VectorAssembler, StringIndexerModel
@@ -251,7 +278,7 @@ def MakeMLDataFramePipeline(df, categorical_features, numeric_features, target_l
 
     pipeline = Pipeline(stages = stages)
 
-    dfML = pipeline.fit(df).transform(df)
+    dfML = pipeline.fit(df).transform(df).select(['label', 'features'])
     #dfx = dfx.select(['label', 'features'] + cols)
     #catindexes = {x.getOutputCol() : x.labels for x in dfML.stages if isinstance(x, StringIndexerModel)}
     return dfML 
