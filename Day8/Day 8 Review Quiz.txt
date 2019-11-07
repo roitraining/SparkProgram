@@ -1,0 +1,30 @@
+#! /bin/sh
+1. In order to process unstructured text, you could use:
+   a. nltk
+   b. pyspark.ml.feature
+ * c. a & b
+   d. None of the above
+
+2. To avoid multiple recomputes of a DataFrame, you could use:
+   a. pin
+*  b. persist
+   c. createOrReplaceTempTable
+   d. memCache
+
+3. In order to transform a new set of values to make a prediction, you would first convert the data using:
+   a. A custom function
+   b. Predict method
+   c. Transform using a trained model object
+ * d. Transform with a trained pipeline  
+
+ 4.In order to create a global counter that all workers could share:
+   a. Use a Python global variable
+ * b. Use a sc.accumulator
+   c. Use a sc.counter
+   d. This cannot be done in Spark
+
+5.In order to use text data in a model object, you:
+* a. Convert it to a features vector with IDF
+  b. Use nltk to break up the sentences into words
+  c. Simply convert the DataFrame to an RDD first
+  d. Use a word cloud
