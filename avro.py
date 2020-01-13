@@ -26,20 +26,8 @@ def initspark(appname = "Test", servername = "local", cassandra="127.0.0.1", mon
     print ('pyspark initialized')
     return sc, spark, conf
 
-def hdfsPath(folder, hostname = 'localhost', port = 9000):
-    if hostname == None:
-        hostname = 'localhost'
-        #hostname = platform.node()
-    if port == None:
-        port = 9000
-    if folder == None:
-        folder = ''
-    return 'hdfs://{0}:{1}/{2}'.format(hostname, port, folder)
-
-def display(df, limit = 10):
-    from IPython.display import display    
-    display(df.limit(limit).toPandas())
-
 if __name__ == '__main__':
     sc, spark, conf = initspark()
+    x = spark.read.format('avro').load('/class/datasets/northwind/AVRO/categories')
+    x.show()
 
