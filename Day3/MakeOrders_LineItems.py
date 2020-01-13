@@ -1,5 +1,5 @@
-o = spark.read.csv('/home/student/ROI/SparkProgram/datasets/northwind/CSVHeaders/orders', header = True, inferSchema = True)
-od = spark.read.csv('/home/student/ROI/SparkProgram/datasets/northwind/CSVHeaders/orderdetails', header = True, inferSchema = True)
+o = spark.read.csv('/class/datasets/northwind/CSVHeaders/orders', header = True, inferSchema = True)
+od = spark.read.csv('/class/datasets/northwind/CSVHeaders/orderdetails', header = True, inferSchema = True)
 
 o.createOrReplaceTempView('Orders')
 od.createOrReplaceTempView('OrderDetails')
