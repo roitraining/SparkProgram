@@ -1,5 +1,0 @@
-{"OrderID":10966,"CustomerID":"CHOPS","OrderDate":"1998-03-20T00:00:00.000Z","LineItems":[{"ProductID":37,"UnitPrice":26.0,"Quantity":8,"Discount":0.0},{"ProductID":56,"UnitPrice":38.0,"Quantity":12,"Discount":0.15},{"ProductID":62,"UnitPrice":49.3,"Quantity":12,"Discount":0.15}]}
-{"OrderID":10967,"CustomerID":"TOMSP","OrderDate":"1998-03-23T00:00:00.000Z","LineItems":[{"ProductID":19,"UnitPrice":9.2,"Quantity":12,"Discount":0.0},{"ProductID":49,"UnitPrice":20.0,"Quantity":40,"Discount":0.0}]}
-{"OrderID":10968,"CustomerID":"ERNSH","OrderDate":"1998-03-23T00:00:00.000Z","LineItems":[{"ProductID":12,"UnitPrice":38.0,"Quantity":30,"Discount":0.0},{"ProductID":24,"UnitPrice":4.5,"Quantity":30,"Discount":0.0},{"ProductID":64,"UnitPrice":33.25,"Quantity":4,"Discount":0.0}]}
-{"OrderID":10969,"CustomerID":"COMMI","OrderDate":"1998-03-23T00:00:00.000Z","LineItems":[{"ProductID":46,"UnitPrice":12.0,"Quantity":9,"Discount":0.0}]}
-{"OrderID":10970,"CustomerID":"BOLID","OrderDate":"1998-03-24T00:00:00.000Z","LineItems":[{"ProductID":52,"UnitPrice":7.0,"Quantity":40,"Discount":0.2}]}

@@ -1,4 +1,0 @@
-{"OrderID":10958,"CustomerID":"OCEAN","OrderDate":"1998-03-18T00:00:00.000Z","LineItems":[{"ProductID":72,"UnitPrice":34.8,"Quantity":5,"Discount":0.0},{"ProductID":5,"UnitPrice":21.35,"Quantity":20,"Discount":0.0},{"ProductID":7,"UnitPrice":30.0,"Quantity":6,"Discount":0.0}]}
-{"OrderID":10959,"CustomerID":"GOURL","OrderDate":"1998-03-18T00:00:00.000Z","LineItems":[{"ProductID":75,"UnitPrice":7.75,"Quantity":20,"Discount":0.15}]}
-{"OrderID":10960,"CustomerID":"HILAA","OrderDate":"1998-03-19T00:00:00.000Z","LineItems":[{"ProductID":41,"UnitPrice":9.65,"Quantity":24,"Discount":0.0},{"ProductID":24,"UnitPrice":4.5,"Quantity":10,"Discount":0.25}]}
-{"OrderID":10961,"CustomerID":"QUEEN","OrderDate":"1998-03-19T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":60,"Discount":0.0},{"ProductID":52,"UnitPrice":7.0,"Quantity":6,"Discount":0.05}]}

@@ -1,4 +1,0 @@
-{"OrderID":10738,"CustomerID":"SPECD","OrderDate":"1997-11-12T00:00:00.000Z","LineItems":[{"ProductID":16,"UnitPrice":17.45,"Quantity":3,"Discount":0.0}]}
-{"OrderID":10739,"CustomerID":"VINET","OrderDate":"1997-11-12T00:00:00.000Z","LineItems":[{"ProductID":52,"UnitPrice":7.0,"Quantity":18,"Discount":0.0},{"ProductID":36,"UnitPrice":19.0,"Quantity":6,"Discount":0.0}]}
-{"OrderID":10740,"CustomerID":"WHITC","OrderDate":"1997-11-13T00:00:00.000Z","LineItems":[{"ProductID":35,"UnitPrice":18.0,"Quantity":35,"Discount":0.2},{"ProductID":45,"UnitPrice":9.5,"Quantity":40,"Discount":0.2},{"ProductID":28,"UnitPrice":45.6,"Quantity":5,"Discount":0.2},{"ProductID":56,"UnitPrice":38.0,"Quantity":14,"Discount":0.2}]}
-{"OrderID":10741,"CustomerID":"AROUT","OrderDate":"1997-11-14T00:00:00.000Z","LineItems":[{"ProductID":2,"UnitPrice":19.0,"Quantity":15,"Discount":0.2}]}

@@ -1,4 +1,0 @@
-{"OrderID":11037,"CustomerID":"GODOS","OrderDate":"1998-04-21T00:00:00.000Z","LineItems":[{"ProductID":70,"UnitPrice":15.0,"Quantity":4,"Discount":0.0}]}
-{"OrderID":11038,"CustomerID":"SUPRD","OrderDate":"1998-04-21T00:00:00.000Z","LineItems":[{"ProductID":40,"UnitPrice":18.4,"Quantity":5,"Discount":0.2},{"ProductID":52,"UnitPrice":7.0,"Quantity":2,"Discount":0.0},{"ProductID":71,"UnitPrice":21.5,"Quantity":30,"Discount":0.0}]}
-{"OrderID":11039,"CustomerID":"LINOD","OrderDate":"1998-04-21T00:00:00.000Z","LineItems":[{"ProductID":28,"UnitPrice":45.6,"Quantity":20,"Discount":0.0},{"ProductID":35,"UnitPrice":18.0,"Quantity":24,"Discount":0.0},{"ProductID":57,"UnitPrice":19.5,"Quantity":28,"Discount":0.0},{"ProductID":49,"UnitPrice":20.0,"Quantity":60,"Discount":0.0}]}
-{"OrderID":11040,"CustomerID":"GREAL","OrderDate":"1998-04-22T00:00:00.000Z","LineItems":[{"ProductID":21,"UnitPrice":10.0,"Quantity":20,"Discount":0.0}]}

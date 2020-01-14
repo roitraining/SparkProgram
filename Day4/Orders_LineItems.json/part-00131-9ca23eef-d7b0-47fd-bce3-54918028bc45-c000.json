@@ -1,4 +1,0 @@
-{"OrderID":10792,"CustomerID":"WOLZA","OrderDate":"1997-12-23T00:00:00.000Z","LineItems":[{"ProductID":68,"UnitPrice":12.5,"Quantity":15,"Discount":0.0},{"ProductID":2,"UnitPrice":19.0,"Quantity":10,"Discount":0.0},{"ProductID":54,"UnitPrice":7.45,"Quantity":3,"Discount":0.0}]}
-{"OrderID":10793,"CustomerID":"AROUT","OrderDate":"1997-12-24T00:00:00.000Z","LineItems":[{"ProductID":41,"UnitPrice":9.65,"Quantity":14,"Discount":0.0},{"ProductID":52,"UnitPrice":7.0,"Quantity":8,"Discount":0.0}]}
-{"OrderID":10794,"CustomerID":"QUEDE","OrderDate":"1997-12-24T00:00:00.000Z","LineItems":[{"ProductID":54,"UnitPrice":7.45,"Quantity":6,"Discount":0.2},{"ProductID":14,"UnitPrice":23.25,"Quantity":15,"Discount":0.2}]}
-{"OrderID":10795,"CustomerID":"ERNSH","OrderDate":"1997-12-24T00:00:00.000Z","LineItems":[{"ProductID":16,"UnitPrice":17.45,"Quantity":65,"Discount":0.0},{"ProductID":17,"UnitPrice":39.0,"Quantity":35,"Discount":0.25}]}

@@ -1,4 +1,0 @@
-{"OrderID":10971,"CustomerID":"FRANR","OrderDate":"1998-03-24T00:00:00.000Z","LineItems":[{"ProductID":29,"UnitPrice":123.79,"Quantity":14,"Discount":0.0}]}
-{"OrderID":10972,"CustomerID":"LACOR","OrderDate":"1998-03-24T00:00:00.000Z","LineItems":[{"ProductID":33,"UnitPrice":2.5,"Quantity":7,"Discount":0.0},{"ProductID":17,"UnitPrice":39.0,"Quantity":6,"Discount":0.0}]}
-{"OrderID":10973,"CustomerID":"LACOR","OrderDate":"1998-03-24T00:00:00.000Z","LineItems":[{"ProductID":75,"UnitPrice":7.75,"Quantity":10,"Discount":0.0},{"ProductID":41,"UnitPrice":9.65,"Quantity":6,"Discount":0.0},{"ProductID":26,"UnitPrice":31.23,"Quantity":5,"Discount":0.0}]}
-{"OrderID":10974,"CustomerID":"SPLIR","OrderDate":"1998-03-25T00:00:00.000Z","LineItems":[{"ProductID":63,"UnitPrice":43.9,"Quantity":10,"Discount":0.0}]}
