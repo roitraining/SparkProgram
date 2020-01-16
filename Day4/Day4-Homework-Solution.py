@@ -8,6 +8,12 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession, SQLContext
 from pyspark.sql.types import *
 
+CASSANDRA_IP=os.getenv('CASSANDRA1')
+print(CASSANDRA_IP)
+
+if CASSANDRA_IP is None:
+    CASSANDRA_IP = '172.18.0.2'
+
 def initspark(appname = "Test", servername = "local", cassandra="cassandra", mongo="mongo"):
     conf = SparkConf().set("spark.cassandra.connection.host", cassandra).setAppName(appname).setMaster(servername)
     sc = SparkContext(conf=conf)
@@ -18,19 +24,19 @@ def initspark(appname = "Test", servername = "local", cassandra="cassandra", mon
     sc.setLogLevel("ERROR")
     return sc, spark, conf
 
-sc, spark, conf = initspark(cassandra = '127.0.0.1', mongo = 'mongodb://127.0.0.1/classroom')
+sc, spark, conf = initspark(cassandra = CASSANDRA_IP, mongo = 'mongodb://127.0.0.1/classroom')
 
 def prepNoSQL():
 	# Prepare Cassandra Table
 	from cassandra.cluster import Cluster
-	cluster = Cluster(['127.0.0.1'])
+	cluster = Cluster([CASSANDRA_IP])
 	session = cluster.connect()
 	session = cluster.connect('classroom')
 	session.execute("drop table if exists products")
 	session.execute("create table products(productid int PRIMARY KEY, productname text, unitprice float)")
 
 	# Write products to Cassandra Table
-	p = spark.read.json('/home/student/ROI/SparkProgram/datasets/northwind/JSON/products')
+	p = spark.read.json('/class/datasets/northwind/JSON/products')
 	p.createOrReplaceTempView('products')
 	p1 = spark.sql('select ProductID as productid, ProductName as productname, UnitPrice as unitprice from products')
 	p1.show()
