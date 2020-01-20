@@ -1,0 +1,4 @@
+{"OrderID":11066,"CustomerID":"WHITC","OrderDate":"1998-05-01T00:00:00.000Z","LineItems":[{"ProductID":34,"UnitPrice":14.0,"Quantity":35,"Discount":0.0},{"ProductID":19,"UnitPrice":9.2,"Quantity":42,"Discount":0.0},{"ProductID":16,"UnitPrice":17.45,"Quantity":3,"Discount":0.0}]}
+{"OrderID":11067,"CustomerID":"DRACD","OrderDate":"1998-05-04T00:00:00.000Z","LineItems":[{"ProductID":41,"UnitPrice":9.65,"Quantity":9,"Discount":0.0}]}
+{"OrderID":11068,"CustomerID":"QUEEN","OrderDate":"1998-05-04T00:00:00.000Z","LineItems":[{"ProductID":28,"UnitPrice":45.6,"Quantity":8,"Discount":0.15},{"ProductID":43,"UnitPrice":46.0,"Quantity":36,"Discount":0.15},{"ProductID":77,"UnitPrice":13.0,"Quantity":28,"Discount":0.15}]}
+{"OrderID":11069,"CustomerID":"TORTU","OrderDate":"1998-05-04T00:00:00.000Z","LineItems":[{"ProductID":39,"UnitPrice":18.0,"Quantity":20,"Discount":0.0}]}
