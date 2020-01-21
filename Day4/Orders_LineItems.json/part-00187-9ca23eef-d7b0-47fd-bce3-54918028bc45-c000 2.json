@@ -1,0 +1,4 @@
+{"OrderID":11025,"CustomerID":"WARTH","OrderDate":"1998-04-15T00:00:00.000Z","LineItems":[{"ProductID":13,"UnitPrice":6.0,"Quantity":20,"Discount":0.1},{"ProductID":1,"UnitPrice":18.0,"Quantity":10,"Discount":0.1}]}
+{"OrderID":11026,"CustomerID":"FRANS","OrderDate":"1998-04-15T00:00:00.000Z","LineItems":[{"ProductID":51,"UnitPrice":53.0,"Quantity":10,"Discount":0.0},{"ProductID":18,"UnitPrice":62.5,"Quantity":8,"Discount":0.0}]}
+{"OrderID":11027,"CustomerID":"BOTTM","OrderDate":"1998-04-16T00:00:00.000Z","LineItems":[{"ProductID":24,"UnitPrice":4.5,"Quantity":30,"Discount":0.25},{"ProductID":62,"UnitPrice":49.3,"Quantity":21,"Discount":0.25}]}
+{"OrderID":11028,"CustomerID":"KOENE","OrderDate":"1998-04-16T00:00:00.000Z","LineItems":[{"ProductID":55,"UnitPrice":24.0,"Quantity":35,"Discount":0.0},{"ProductID":59,"UnitPrice":55.0,"Quantity":24,"Discount":0.0}]}
