@@ -1,13 +1,21 @@
 # pip install cassandra-driver
 # pyspark --packages com.datastax.spark:spark-cassandra-connector_2.11:2.4.1
 
-import sys
-sys.path.append('/home/student/ROI/SparkProgram')
-from initspark import initspark
-sc, spark, conf = initspark(cassandra='127.0.0.1')
+import os
+CASSANDRA_IP=os.getenv('CASSANDRA1')
+print(CASSANDRA_IP)
+
+if CASSANDRA_IP is None:
+    CASSANDRA_IP = '172.18.0.2'
 
 from cassandra.cluster import Cluster
-cluster = Cluster(['127.0.0.1'])
+cluster = Cluster([CASSANDRA_IP])
+
+import sys
+sys.path.append('/class')
+from initspark import initspark
+sc, spark, conf = initspark(cassandra=CASSANDRA_IP)
+
 session = cluster.connect()
 session.execute('DROP KEYSPACE IF EXISTS classroom')
 session.execute("CREATE KEYSPACE classroom WITH REPLICATION={'class':'SimpleStrategy', 'replication_factor':'1'}")

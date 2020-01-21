@@ -5,6 +5,15 @@
 import platform, os, sys
 from os.path import dirname
 
+CASSANDRA_IP=os.getenv('CASSANDRA1')
+print(CASSANDRA_IP)
+
+if CASSANDRA_IP is None:
+    CASSANDRA_IP = '172.18.0.2'
+
+from cassandra.cluster import Cluster
+cluster = Cluster([CASSANDRA_IP])
+
 if not 'SPARK_HOME' in os.environ and not os.environ['SPARK_HOME'] in sys.path:
     sys.path.append(os.environ['SPARK_HOME']+'/python')
 
@@ -24,7 +33,7 @@ def initspark(appname = "Test", servername = "local", cassandra="cassandra", mon
 
 print('*' * 80)
 
-sc, spark, conf = initspark(cassandra = '127.0.0.1', mongo = 'mongodb://127.0.0.1/classroom')
+sc, spark, conf = initspark(cassandra = CASSANDRA_IP, mongo = 'mongodb://127.0.0.1/classroom')
 
 # Python to access a Cassandra cluster through Spark
 

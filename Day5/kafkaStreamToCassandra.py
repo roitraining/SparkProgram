@@ -1,11 +1,24 @@
+import os
+CASSANDRA_IP=os.getenv('CASSANDRA1')
+print(CASSANDRA_IP)
+
+if CASSANDRA_IP is None:
+    CASSANDRA_IP = '172.18.0.2'
+
+from cassandra.cluster import Cluster
+cluster = Cluster([CASSANDRA_IP])
+
+import sys
+sys.path.append('/class')
+from initspark import initspark
+#sc, spark, conf = initspark(cassandra=CASSANDRA_IP)
+
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SparkSession
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
 from json import loads
 
-from cassandra.cluster import Cluster
-cluster = Cluster(['127.0.0.1'])
 session = cluster.connect('classroom')
 session.execute("drop table if exists kafka")
 session.execute("create table kafka(id int PRIMARY KEY, name text, amount float, parentid int, parentname text)")
@@ -18,7 +31,7 @@ def getSparkSessionInstance(sparkConf):
             .getOrCreate()
     return globals()["sparkSessionSingletonInstance"]
 
-config = SparkConf()
+config = SparkConf().set("spark.cassandra.connection.host", CASSANDRA_IP)
 config.setAppName('kafkaStream')
 
 #sc = SparkContext("local[2]", "kafkaStream")

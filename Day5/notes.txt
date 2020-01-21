@@ -24,6 +24,7 @@ cp ~/ROI/SparkProgram/datasets/text/a*.txt stream
 ./kafka-send.sh
 enter int,float
 
+source ~/.bashrc
 ./kafkaStreamToCassandra-submit.sh
 # new window
 python makeKafkaMessages.py
