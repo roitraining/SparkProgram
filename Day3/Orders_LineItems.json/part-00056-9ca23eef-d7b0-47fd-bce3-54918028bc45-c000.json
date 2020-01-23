@@ -1,4 +1,0 @@
-{"OrderID":10481,"CustomerID":"RICAR","OrderDate":"1997-03-20T00:00:00.000Z","LineItems":[{"ProductID":49,"UnitPrice":16.0,"Quantity":24,"Discount":0.0},{"ProductID":60,"UnitPrice":27.2,"Quantity":40,"Discount":0.0}]}
-{"OrderID":10482,"CustomerID":"LAZYK","OrderDate":"1997-03-21T00:00:00.000Z","LineItems":[{"ProductID":40,"UnitPrice":14.7,"Quantity":10,"Discount":0.0}]}
-{"OrderID":10483,"CustomerID":"WHITC","OrderDate":"1997-03-24T00:00:00.000Z","LineItems":[{"ProductID":77,"UnitPrice":10.4,"Quantity":30,"Discount":0.05},{"ProductID":34,"UnitPrice":11.2,"Quantity":35,"Discount":0.05}]}
-{"OrderID":10484,"CustomerID":"BSBEV","OrderDate":"1997-03-24T00:00:00.000Z","LineItems":[{"ProductID":40,"UnitPrice":14.7,"Quantity":10,"Discount":0.0},{"ProductID":21,"UnitPrice":8.0,"Quantity":14,"Discount":0.0},{"ProductID":51,"UnitPrice":42.4,"Quantity":3,"Discount":0.0}]}

@@ -1,4 +1,0 @@
-{"OrderID":10751,"CustomerID":"RICSU","OrderDate":"1997-11-24T00:00:00.000Z","LineItems":[{"ProductID":26,"UnitPrice":31.23,"Quantity":12,"Discount":0.1},{"ProductID":30,"UnitPrice":25.89,"Quantity":30,"Discount":0.0},{"ProductID":50,"UnitPrice":16.25,"Quantity":20,"Discount":0.1},{"ProductID":73,"UnitPrice":15.0,"Quantity":15,"Discount":0.0}]}
-{"OrderID":10752,"CustomerID":"NORTS","OrderDate":"1997-11-24T00:00:00.000Z","LineItems":[{"ProductID":1,"UnitPrice":18.0,"Quantity":8,"Discount":0.0},{"ProductID":69,"UnitPrice":36.0,"Quantity":3,"Discount":0.0}]}
-{"OrderID":10753,"CustomerID":"FRANS","OrderDate":"1997-11-25T00:00:00.000Z","LineItems":[{"ProductID":45,"UnitPrice":9.5,"Quantity":4,"Discount":0.0},{"ProductID":74,"UnitPrice":10.0,"Quantity":5,"Discount":0.0}]}
-{"OrderID":10754,"CustomerID":"MAGAA","OrderDate":"1997-11-25T00:00:00.000Z","LineItems":[{"ProductID":40,"UnitPrice":18.4,"Quantity":3,"Discount":0.0}]}

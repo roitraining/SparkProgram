@@ -1,4 +1,0 @@
-{"OrderID":10896,"CustomerID":"MAISD","OrderDate":"1998-02-19T00:00:00.000Z","LineItems":[{"ProductID":45,"UnitPrice":9.5,"Quantity":15,"Discount":0.0},{"ProductID":56,"UnitPrice":38.0,"Quantity":16,"Discount":0.0}]}
-{"OrderID":10897,"CustomerID":"HUNGO","OrderDate":"1998-02-19T00:00:00.000Z","LineItems":[{"ProductID":30,"UnitPrice":25.89,"Quantity":36,"Discount":0.0},{"ProductID":29,"UnitPrice":123.79,"Quantity":80,"Discount":0.0}]}
-{"OrderID":10898,"CustomerID":"OCEAN","OrderDate":"1998-02-20T00:00:00.000Z","LineItems":[{"ProductID":13,"UnitPrice":6.0,"Quantity":5,"Discount":0.0}]}
-{"OrderID":10899,"CustomerID":"LILAS","OrderDate":"1998-02-20T00:00:00.000Z","LineItems":[{"ProductID":39,"UnitPrice":18.0,"Quantity":8,"Discount":0.15}]}

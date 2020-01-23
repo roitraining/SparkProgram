@@ -1,4 +1,0 @@
-{"OrderID":10568,"CustomerID":"GALED","OrderDate":"1997-06-13T00:00:00.000Z","LineItems":[{"ProductID":10,"UnitPrice":31.0,"Quantity":5,"Discount":0.0}]}
-{"OrderID":10569,"CustomerID":"RATTC","OrderDate":"1997-06-16T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":30,"Discount":0.0},{"ProductID":31,"UnitPrice":12.5,"Quantity":35,"Discount":0.2}]}
-{"OrderID":10570,"CustomerID":"MEREP","OrderDate":"1997-06-17T00:00:00.000Z","LineItems":[{"ProductID":56,"UnitPrice":38.0,"Quantity":60,"Discount":0.05},{"ProductID":11,"UnitPrice":21.0,"Quantity":15,"Discount":0.05}]}
-{"OrderID":10571,"CustomerID":"ERNSH","OrderDate":"1997-06-17T00:00:00.000Z","LineItems":[{"ProductID":42,"UnitPrice":14.0,"Quantity":28,"Discount":0.15},{"ProductID":14,"UnitPrice":23.25,"Quantity":11,"Discount":0.15}]}

@@ -1,4 +1,0 @@
-{"OrderID":11045,"CustomerID":"BOTTM","OrderDate":"1998-04-23T00:00:00.000Z","LineItems":[{"ProductID":51,"UnitPrice":53.0,"Quantity":24,"Discount":0.0},{"ProductID":33,"UnitPrice":2.5,"Quantity":15,"Discount":0.0}]}
-{"OrderID":11046,"CustomerID":"WANDK","OrderDate":"1998-04-23T00:00:00.000Z","LineItems":[{"ProductID":12,"UnitPrice":38.0,"Quantity":20,"Discount":0.05},{"ProductID":35,"UnitPrice":18.0,"Quantity":18,"Discount":0.05},{"ProductID":32,"UnitPrice":32.0,"Quantity":15,"Discount":0.05}]}
-{"OrderID":11047,"CustomerID":"EASTC","OrderDate":"1998-04-24T00:00:00.000Z","LineItems":[{"ProductID":5,"UnitPrice":21.35,"Quantity":30,"Discount":0.25},{"ProductID":1,"UnitPrice":18.0,"Quantity":25,"Discount":0.25}]}
-{"OrderID":11048,"CustomerID":"BOTTM","OrderDate":"1998-04-24T00:00:00.000Z","LineItems":[{"ProductID":68,"UnitPrice":12.5,"Quantity":42,"Discount":0.0}]}

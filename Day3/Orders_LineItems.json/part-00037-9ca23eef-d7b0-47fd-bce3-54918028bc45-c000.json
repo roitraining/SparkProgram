@@ -1,4 +1,0 @@
-{"OrderID":10402,"CustomerID":"ERNSH","OrderDate":"1997-01-02T00:00:00.000Z","LineItems":[{"ProductID":23,"UnitPrice":7.2,"Quantity":60,"Discount":0.0},{"ProductID":63,"UnitPrice":35.1,"Quantity":65,"Discount":0.0}]}
-{"OrderID":10403,"CustomerID":"ERNSH","OrderDate":"1997-01-03T00:00:00.000Z","LineItems":[{"ProductID":16,"UnitPrice":13.9,"Quantity":21,"Discount":0.15},{"ProductID":48,"UnitPrice":10.2,"Quantity":70,"Discount":0.15}]}
-{"OrderID":10404,"CustomerID":"MAGAA","OrderDate":"1997-01-03T00:00:00.000Z","LineItems":[{"ProductID":42,"UnitPrice":11.2,"Quantity":40,"Discount":0.05},{"ProductID":26,"UnitPrice":24.9,"Quantity":30,"Discount":0.05},{"ProductID":49,"UnitPrice":16.0,"Quantity":30,"Discount":0.05}]}
-{"OrderID":10405,"CustomerID":"LINOD","OrderDate":"1997-01-06T00:00:00.000Z","LineItems":[{"ProductID":3,"UnitPrice":8.0,"Quantity":50,"Discount":0.0}]}

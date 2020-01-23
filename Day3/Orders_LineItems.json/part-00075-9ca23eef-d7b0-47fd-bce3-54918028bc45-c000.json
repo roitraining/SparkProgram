@@ -1,4 +1,0 @@
-{"OrderID":10560,"CustomerID":"FRANK","OrderDate":"1997-06-06T00:00:00.000Z","LineItems":[{"ProductID":30,"UnitPrice":25.89,"Quantity":20,"Discount":0.0},{"ProductID":62,"UnitPrice":49.3,"Quantity":15,"Discount":0.25}]}
-{"OrderID":10561,"CustomerID":"FOLKO","OrderDate":"1997-06-06T00:00:00.000Z","LineItems":[{"ProductID":51,"UnitPrice":53.0,"Quantity":50,"Discount":0.0},{"ProductID":44,"UnitPrice":19.45,"Quantity":10,"Discount":0.0}]}
-{"OrderID":10562,"CustomerID":"REGGC","OrderDate":"1997-06-09T00:00:00.000Z","LineItems":[{"ProductID":33,"UnitPrice":2.5,"Quantity":20,"Discount":0.1},{"ProductID":62,"UnitPrice":49.3,"Quantity":10,"Discount":0.1}]}
-{"OrderID":10563,"CustomerID":"RICAR","OrderDate":"1997-06-10T00:00:00.000Z","LineItems":[{"ProductID":52,"UnitPrice":7.0,"Quantity":70,"Discount":0.0},{"ProductID":36,"UnitPrice":19.0,"Quantity":25,"Discount":0.0}]}

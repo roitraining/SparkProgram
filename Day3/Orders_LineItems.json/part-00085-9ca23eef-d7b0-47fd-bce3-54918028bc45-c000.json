@@ -1,4 +1,0 @@
-{"OrderID":10601,"CustomerID":"HILAA","OrderDate":"1997-07-16T00:00:00.000Z","LineItems":[{"ProductID":13,"UnitPrice":6.0,"Quantity":60,"Discount":0.0},{"ProductID":59,"UnitPrice":55.0,"Quantity":35,"Discount":0.0}]}
-{"OrderID":10602,"CustomerID":"VAFFE","OrderDate":"1997-07-17T00:00:00.000Z","LineItems":[{"ProductID":77,"UnitPrice":13.0,"Quantity":5,"Discount":0.25}]}
-{"OrderID":10603,"CustomerID":"SAVEA","OrderDate":"1997-07-18T00:00:00.000Z","LineItems":[{"ProductID":22,"UnitPrice":21.0,"Quantity":48,"Discount":0.0},{"ProductID":49,"UnitPrice":20.0,"Quantity":25,"Discount":0.05}]}
-{"OrderID":10604,"CustomerID":"FURIB","OrderDate":"1997-07-18T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":10,"Discount":0.1},{"ProductID":48,"UnitPrice":12.75,"Quantity":6,"Discount":0.1}]}

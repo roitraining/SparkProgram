@@ -1,4 +1,0 @@
-{"OrderID":10734,"CustomerID":"GOURL","OrderDate":"1997-11-07T00:00:00.000Z","LineItems":[{"ProductID":76,"UnitPrice":18.0,"Quantity":20,"Discount":0.0},{"ProductID":30,"UnitPrice":25.89,"Quantity":15,"Discount":0.0},{"ProductID":6,"UnitPrice":25.0,"Quantity":30,"Discount":0.0}]}
-{"OrderID":10735,"CustomerID":"LETSS","OrderDate":"1997-11-10T00:00:00.000Z","LineItems":[{"ProductID":61,"UnitPrice":28.5,"Quantity":20,"Discount":0.1},{"ProductID":77,"UnitPrice":13.0,"Quantity":2,"Discount":0.1}]}
-{"OrderID":10736,"CustomerID":"HUNGO","OrderDate":"1997-11-11T00:00:00.000Z","LineItems":[{"ProductID":75,"UnitPrice":7.75,"Quantity":20,"Discount":0.0},{"ProductID":65,"UnitPrice":21.05,"Quantity":40,"Discount":0.0}]}
-{"OrderID":10737,"CustomerID":"VINET","OrderDate":"1997-11-11T00:00:00.000Z","LineItems":[{"ProductID":13,"UnitPrice":6.0,"Quantity":4,"Discount":0.0},{"ProductID":41,"UnitPrice":9.65,"Quantity":12,"Discount":0.0}]}

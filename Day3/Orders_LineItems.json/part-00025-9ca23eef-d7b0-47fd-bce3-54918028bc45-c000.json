@@ -1,4 +1,0 @@
-{"OrderID":10352,"CustomerID":"FURIB","OrderDate":"1996-11-12T00:00:00.000Z","LineItems":[{"ProductID":24,"UnitPrice":3.6,"Quantity":10,"Discount":0.0},{"ProductID":54,"UnitPrice":5.9,"Quantity":20,"Discount":0.15}]}
-{"OrderID":10353,"CustomerID":"PICCO","OrderDate":"1996-11-13T00:00:00.000Z","LineItems":[{"ProductID":38,"UnitPrice":210.8,"Quantity":50,"Discount":0.2},{"ProductID":11,"UnitPrice":16.8,"Quantity":12,"Discount":0.2}]}
-{"OrderID":10354,"CustomerID":"PERIC","OrderDate":"1996-11-14T00:00:00.000Z","LineItems":[{"ProductID":1,"UnitPrice":14.4,"Quantity":12,"Discount":0.0},{"ProductID":29,"UnitPrice":99.0,"Quantity":4,"Discount":0.0}]}
-{"OrderID":10355,"CustomerID":"AROUT","OrderDate":"1996-11-15T00:00:00.000Z","LineItems":[{"ProductID":57,"UnitPrice":15.6,"Quantity":25,"Discount":0.0},{"ProductID":24,"UnitPrice":3.6,"Quantity":25,"Discount":0.0}]}

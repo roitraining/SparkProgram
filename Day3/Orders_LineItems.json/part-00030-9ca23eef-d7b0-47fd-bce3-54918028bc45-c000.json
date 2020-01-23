@@ -1,4 +1,0 @@
-{"OrderID":10373,"CustomerID":"HUNGO","OrderDate":"1996-12-05T00:00:00.000Z","LineItems":[{"ProductID":58,"UnitPrice":10.6,"Quantity":80,"Discount":0.2},{"ProductID":71,"UnitPrice":17.2,"Quantity":50,"Discount":0.2}]}
-{"OrderID":10374,"CustomerID":"WOLZA","OrderDate":"1996-12-05T00:00:00.000Z","LineItems":[{"ProductID":58,"UnitPrice":10.6,"Quantity":15,"Discount":0.0},{"ProductID":31,"UnitPrice":10.0,"Quantity":30,"Discount":0.0}]}
-{"OrderID":10375,"CustomerID":"HUNGC","OrderDate":"1996-12-06T00:00:00.000Z","LineItems":[{"ProductID":14,"UnitPrice":18.6,"Quantity":15,"Discount":0.0},{"ProductID":54,"UnitPrice":5.9,"Quantity":10,"Discount":0.0}]}
-{"OrderID":10376,"CustomerID":"MEREP","OrderDate":"1996-12-09T00:00:00.000Z","LineItems":[{"ProductID":31,"UnitPrice":10.0,"Quantity":42,"Discount":0.05}]}

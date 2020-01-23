@@ -1,4 +1,0 @@
-{"OrderID":10933,"CustomerID":"ISLAT","OrderDate":"1998-03-06T00:00:00.000Z","LineItems":[{"ProductID":53,"UnitPrice":32.8,"Quantity":2,"Discount":0.0},{"ProductID":61,"UnitPrice":28.5,"Quantity":30,"Discount":0.0}]}
-{"OrderID":10934,"CustomerID":"LEHMS","OrderDate":"1998-03-09T00:00:00.000Z","LineItems":[{"ProductID":6,"UnitPrice":25.0,"Quantity":20,"Discount":0.0}]}
-{"OrderID":10935,"CustomerID":"WELLI","OrderDate":"1998-03-09T00:00:00.000Z","LineItems":[{"ProductID":18,"UnitPrice":62.5,"Quantity":4,"Discount":0.25},{"ProductID":23,"UnitPrice":9.0,"Quantity":8,"Discount":0.25},{"ProductID":1,"UnitPrice":18.0,"Quantity":21,"Discount":0.0}]}
-{"OrderID":10936,"CustomerID":"GREAL","OrderDate":"1998-03-09T00:00:00.000Z","LineItems":[{"ProductID":36,"UnitPrice":19.0,"Quantity":30,"Discount":0.2}]}
