@@ -257,7 +257,7 @@ def MakeMLDataFrame(df, categorical_features, numeric_features, target_label = N
         return (df3, keydict)
     return df3
 
-def MakeMLDataFramePipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
+def MakeMLPipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
     from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer, VectorAssembler, StringIndexerModel
     from pyspark.ml import Pipeline
 
@@ -272,16 +272,16 @@ def MakeMLDataFramePipeline(df, categorical_features, numeric_features, target_l
         label_stringIdx = StringIndexer(inputCol = target_label, outputCol = 'label')
         stages += [label_stringIdx]
 
-    assemblerInputs = [c + "_classVec" for c in categorical_features] + numeric_features
+    assemblerInputs = numeric_features + [c + "_classVec" for c in categorical_features] 
     assembler = VectorAssembler(inputCols=assemblerInputs, outputCol="features")
     stages += [assembler]
 
     pipeline = Pipeline(stages = stages)
 
-    dfML = pipeline.fit(df).transform(df).select(['label', 'features'])
+    #dfML = pipeline.fit(df).transform(df).select(['label', 'features'])
     #dfx = dfx.select(['label', 'features'] + cols)
     #catindexes = {x.getOutputCol() : x.labels for x in dfML.stages if isinstance(x, StringIndexerModel)}
-    return dfML 
+    return pipeline 
 
 def evaluateCluster(model, df):
     from pyspark.ml.clustering import KMeans
