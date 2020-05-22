@@ -106,13 +106,70 @@ def collect_tuple(df):
 def collect_dict(df):
     return dict(collect_tuple(df))
 
-def cm_percent(cm, length, legend = True):
+def pretty_confusion(cm:'np.array', include_header = True, include_percent = False, commas = True):
     import numpy as np
-    x = np.ndarray(shape = (2,2), \
-                      buffer = np.array([100 *(cm[0][0] + cm[1][1])/length, \
-                      100 * cm[0][1]/length, 100 * cm[1][0]/length, \
-                      100 * (cm[1][0] + cm[0][1])/length]))
-    return x
+    # find the length of the largest number for proper spacing
+    digits = max(4, len(max(cm.reshape(np.size(cm, 0) ** 2, ).astype(str), key = len)))
+    # if commas are supposed to be displayed, add extra space for them
+    
+    commadigits, commas = (digits // 3, ',') if commas else (0, '')
+    digits += commadigits
+        
+    # add the row and column totals to the matrix
+    cm = cm.astype(int)
+    cm1 = np.concatenate((cm, cm.sum(axis = 1).reshape(np.size(cm, 0),1)), axis = 1)
+    cm2 = np.concatenate((cm1, cm1.sum(axis = 0).reshape(1,np.size(cm1, 1))), axis = 0)
+    size = np.size(cm, 0)
+    
+    # calculate the total width to repeat the underlines
+    width = (digits + 3) * (size + 1) - 3
+
+    if include_header:
+        ret = '  +' + (width + 1) * '-' + '+\nA | ' + 'Predicted'.center(width) + '|\n'
+        ret += 'c +' + '-' * width + '-+\n'
+    else:
+        ret = ''
+    actual = 'tual' + ' ' * 100
+
+    # build the format string for each line of the matrix
+    for r in range(size + 1):
+        if include_header:
+            ret += actual[0] + ' |'
+            actual = actual[1:]
+        if r == size:
+            ret += '=' * width + '=' + ('|' if include_header else '') + '\n' + (actual[0] + ' |' if include_header else '')
+        ret += ('{:>' + str(digits) + commas + 'd} + ') * (size - 1) + \
+                '{:>' + str(digits) + commas + 'd} = {:' + str(digits) + commas + 'd} '+ ('|\n' if include_header else '\n')
+    if include_header:
+        ret += '  +' + ((width + 1) * '-') + '+'
+
+    # take the matrix, flatten it and unpack it into the placeholders of the format string
+    ret = ret.format(*(cm2.reshape(len(cm2) ** 2)))
+    
+    # if the percentages are desired add that as a second return value
+    if include_percent and size == 2:
+        import numpy as np
+        length = cm2[2,2]
+        ret2 = f'''
+  +-----------------------------------+
+  | % Correct / % FP | % FN / % Wrong |
+  |-----------------------------------|
+  |          {100 *(cm[0][0] + cm[1][1])/length:>5.2f}   |        {100 * cm[0][1]/length:>5.2f}   |
+  |          {100 * cm[1][0]/length:>5.2f}   |        {100 * (cm[1][0] + cm[0][1])/length:>5.2f}   |
+  +-----------------------------------+
+    '''    
+        return (ret, ret2)
+
+    return ret
+# end pretty_confusion
+
+#def cm_percent(cm, length, legend = True):
+#    import numpy as np
+#    x = np.ndarray(shape = (2,2), \
+#                      buffer = np.array([100 *(cm[0][0] + cm[1][1])/length, \
+#                      100 * cm[0][1]/length, 100 * cm[1][0]/length, \
+#                      100 * (cm[1][0] + cm[0][1])/length]))
+#    return x
 
 def evaluate_model(model):
     try:
@@ -159,17 +216,23 @@ def evaluate_predictions(predictions, show = True):
         log[x]['F1 Measure'] = metrics.fMeasure(x, beta = 1.0)
 
     # Confusion Matrix
-    log['cm'] = metrics.confusionMatrix().toArray()
-    log['cmpercent'] = cm_percent(log['cm'], predictions.count(), show)
+    # log['cm'] = metrics.confusionMatrix().toArray()
+    # log['cmpercent'] = cm_percent(log['cm'], predictions.count(), show)
+    #log['cm'], log['cmpercent']
+    log['cm'] = pretty_confusion(metrics.confusionMatrix().toArray(), include_percent = True)
+    log['cmpercent'] = ''
+    if type(x) is tuple:
+        log['cm'], log['cmpercent'] = x
 
     if show:
         show_predictions(predictions)
 
-        print ('Confusion Matrix')
-        print (' TP', 'FN\n', 'FP', 'TN')
-        print (log['cm'])
-        print (' PC', 'FN\n', 'FP', 'PW')
-        print (log['cmpercent'])
+        print('Confusion Matrix')
+        #print (' TP', 'FN\n', 'FP', 'TN')
+        print(log['cm'])
+        #print (' PC', 'FN\n', 'FP', 'PW')
+        print()
+        print(log['cmpercent'])
         print ('')
         print("Area under ROC = {}".format(log['auroc']))
         print("Area under AUPR = {}".format(log['aupr']))
@@ -257,9 +320,8 @@ def MakeMLDataFrame(df, categorical_features, numeric_features, target_label = N
         return (df3, keydict)
     return df3
 
-def MakeMLPipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
+def MakeMLPipelineStages(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
     from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer, VectorAssembler, StringIndexerModel
-    from pyspark.ml import Pipeline
 
     stages = []
 
@@ -275,13 +337,38 @@ def MakeMLPipeline(df, categorical_features, numeric_features, target_label = No
     assemblerInputs = numeric_features + [c + "_classVec" for c in categorical_features] 
     assembler = VectorAssembler(inputCols=assemblerInputs, outputCol="features")
     stages += [assembler]
+    return stages
 
-    pipeline = Pipeline(stages = stages)
+def MakeMLPipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
+    from pyspark.ml import Pipeline
+    stages = MakeMLPipelineStages(df, categorical_features, numeric_features, target_label, target_is_categorical)
+    return Pipeline(stages = stages)
 
-    #dfML = pipeline.fit(df).transform(df).select(['label', 'features'])
-    #dfx = dfx.select(['label', 'features'] + cols)
-    #catindexes = {x.getOutputCol() : x.labels for x in dfML.stages if isinstance(x, StringIndexerModel)}
-    return pipeline 
+#def MakeMLPipeline(df, categorical_features, numeric_features, target_label = None, target_is_categorical = True):
+#    from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer, VectorAssembler, StringIndexerModel
+#    from pyspark.ml import Pipeline
+#
+#    stages = []
+#
+#    for c in categorical_features:
+#        stringIndexer = StringIndexer(inputCol = c, outputCol = c + '_Index')
+#        encoder = OneHotEncoderEstimator(inputCols=[stringIndexer.getOutputCol()], outputCols=[c + "_classVec"])
+#        stages += [stringIndexer, encoder]
+#        
+#    if target_is_categorical:
+#        label_stringIdx = StringIndexer(inputCol = target_label, outputCol = 'label')
+#        stages += [label_stringIdx]
+#
+#    assemblerInputs = numeric_features + [c + "_classVec" for c in categorical_features] 
+#    assembler = VectorAssembler(inputCols=assemblerInputs, outputCol="features")
+#    stages += [assembler]
+#
+#    pipeline = Pipeline(stages = stages)
+#
+#    #dfML = pipeline.fit(df).transform(df).select(['label', 'features'])
+#    #dfx = dfx.select(['label', 'features'] + cols)
+#    #catindexes = {x.getOutputCol() : x.labels for x in dfML.stages if isinstance(x, StringIndexerModel)}
+#    return pipeline 
 
 def evaluateCluster(model, df):
     from pyspark.ml.clustering import KMeans
@@ -316,6 +403,7 @@ def plot_elbow(df, cluster_cnt = 10):
     plt.ylabel('Score')
     plt.title('Elbow Curve')
     plt.xticks(np.arange(2, cluster_cnt))
+
 
 if __name__ == '__main__':
     sc, spark, conf = initspark()
