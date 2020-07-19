@@ -106,8 +106,19 @@ def collect_tuple(df):
 def collect_dict(df):
     return dict(collect_tuple(df))
 
-def pretty_confusion(cm:'np.array', include_header = True, include_percent = False, commas = True):
+def pretty_confusion(data, include_header = True, include_percent = False, commas = True):
     import numpy as np
+    from pyspark.sql import DataFrame
+    from pyspark.mllib.evaluation import MulticlassMetrics
+
+    if type(data) is DataFrame:
+        # You've passed in a DataFrame with actual and predicted values so let's calculate the cm for you
+        metrics = MulticlassMetrics(data.select(['prediction','label']).rdd) 
+        cm = metrics.confusionMatrix().toArray()
+    else:
+        # You've passed in a numpy array which is already a confusion matrix
+        cm = data
+
     # find the length of the largest number for proper spacing
     digits = max(4, len(max(cm.reshape(np.size(cm, 0) ** 2, ).astype(str), key = len)))
     # if commas are supposed to be displayed, add extra space for them
@@ -403,6 +414,26 @@ def plot_elbow(df, cluster_cnt = 10):
     plt.ylabel('Score')
     plt.title('Elbow Curve')
     plt.xticks(np.arange(2, cluster_cnt))
+
+'''
+some random code I did not want to lose
+
+from pyspark.sql.functions import expr, udf
+from pyspark.sql.types import *
+
+print(lr2Predictions.select('probability').take(2))
+#print(lr2Predictions.where('probability[0] >= .1 and probability[0] <= .9').select('probability').take(2))
+from pyspark.sql.functions import udf
+from pyspark.sql.types import FloatType
+
+spark.udf.register('firstelement', lambda v:float(v[0]), FloatType())
+[0]
+lr2Predictions.createOrReplaceTempView('predictions')
+display(spark.sql('select probability from predictions where firstelement(probability) between .1 and .9'))
+
+firstelement=udf(lambda v:float(v[0]),FloatType())
+#lr2Predictions.select(firstelement('probability')).show()
+display(lr2Predictions.where(firstelement('probability') >= .1).where(firstelement('probability') <= .9 ).select('probability'))'''
 
 
 if __name__ == '__main__':
